@@ -1,25 +1,18 @@
 require('dotenv').config()
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const port = process.env.PORT;
+const express = require('express')
+  , app = express()
+  , bodyParser = require('body-parser')
+  , port = process.env.PORT || 3000
 
-const pokedexRouter = require('./routes/pokedex');
-const typesRouter = require('./routes/types');
-
+app.use('/api/pokedex', require('./routes/pokedex'));
+app.use('/api/type', require('./routes/types'));
+  
 app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
   res.json({'message': 'ok'});
 })
-
-app.use('/api/pokedex', pokedexRouter);
-app.use('/api/type', typesRouter);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
@@ -30,6 +23,6 @@ app.use((err, req, res, next) => {
   return;
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Listening at http://localhost:${port}`)
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`)
 });

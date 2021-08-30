@@ -6,9 +6,11 @@ async function getTypes(){
     `SELECT id, name, short_name, color FROM types`
   );
   const data = helper.emptyOrRows(rows);
+  const meta = {};
 
   return {
-    data
+    data,
+    meta
   }
 }
 
@@ -17,9 +19,11 @@ async function getRelations(){
     `SELECT attack_id, defense_id, effect_rate FROM type_relations`
   );
   const data = helper.emptyOrRows(rows);
+  const meta = {};
 
   return {
-    data
+    data,
+    meta
   }
 }
 

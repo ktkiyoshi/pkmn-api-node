@@ -1,6 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const pokedex = require('../services/pokedex');
+const express = require('express')
+  , router = express.Router()
+  , pokedex = require('../services/pokedex')
 
 /* GET pokedex */
 router.get('/v1/zenkoku', async function(req, res, next) {

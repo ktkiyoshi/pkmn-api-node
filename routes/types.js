@@ -1,6 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const types = require('../services/types');
+const express = require('express')
+  , router = express.Router()
+  , types = require('../services/types');
 
 /* GET types */
 router.get('/v1/types', async function(req, res, next) {
