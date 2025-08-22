@@ -1,4 +1,4 @@
-# pkmn_node
+# pkmn-api-node
 
 ## Setup
 ### Make .env file
