@@ -20,3 +20,12 @@ node index.js
  or
 npm start
 ```
+
+## Access
+### pokedex
+- http://localhost:3000/api/pokedex/v1/zenkoku
+- http://localhost:3000/api/pokedex/v1/names
+
+### type
+- http://localhost:3000/api/type/v1/types
+- http://localhost:3000/api/type/v1/relations

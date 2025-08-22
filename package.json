@@ -1,5 +1,5 @@
 {
-  "name": "pkmn_node",
+  "name": "pkmn-api-node",
   "version": "1.0.0",
   "description": "pkmn api with node and express",
   "main": "index.js",

@@ -5,9 +5,9 @@ const config = require('../config');
 async function getPokedex(page = 1){
   const offset = helper.getOffset(page, config.listPerPage);
   const rows = await db.query(
-    `SELECT id, poke_id, sub_id, full_name, form, height, weight, type1, type2,
-     ability1, ability2, hidden_ability, hp, attack, defense,
-     special_attack, special_defense speed FROM pokedex`
+    `SELECT id, poke_id, sub_id, height, weight, type1, type2,
+     ability1, ability2, ability3, hidden_ability, hp, attack, defense,
+     special_attack, special_defense speed FROM pokedex_gen9`
     //  LIMIT ?,?`, 
     // [
     //   String(offset),

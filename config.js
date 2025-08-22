@@ -7,6 +7,7 @@ const config = {
     user: env.DB_USER,
     password: env.DB_PASS,
     database: env.DB_NAME,
+    port: env.DB_PORT,
   },
   listPerPage: env.LIST_PER_PAGE || 10,
 };
